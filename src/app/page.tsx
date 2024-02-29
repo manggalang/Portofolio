@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import HomeStyle from "../style/home.module.css";
+import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
     <main>
-      <section className="h-[768px]">
+      <section className="banner h-[768px]">
         <div className="container flex items-center justify-between h-full">
           <div className="relative">
             <div className="absolute left-0 top-[50%] translate-y-[-50%] w-[550px]">
-              <p className="font-bold text-grey text-[24px]">Hello, Welcome</p>
               <h1 className="font-space-grotesk font-bold text-white text-[60px]">
-                I’m <span className="text-primary">Mang Galang</span>, a Web
-                Developer
+                I’m Galang, a <br /> <span className={HomeStyle.typing}></span>
               </h1>
               <p className="font-bold text-grey text-[24px]">
                 Based in Bali, Indonesia
@@ -54,18 +54,19 @@ export default function Home() {
                   </Link>
                   <Link href="#">
                     <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
                       width="32"
                       height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 26 26"
                       className="group"
                     >
                       <path
-                        d="M27.0707 7.45601C26.6381 6.80257 26.0256 6.30273 25.2992 6.01217C23.7222 5.37985 22.3661 4.95745 21.1526 4.71937C20.3014 4.55297 19.4586 4.97153 19.0534 5.76001L18.9523 5.95713C18.0538 5.85793 17.0995 5.82465 16.0128 5.85217C14.8986 5.82529 13.9411 5.85793 13.0413 5.95713L12.9408 5.76001C12.5357 4.97153 11.6915 4.55361 10.8422 4.72001C9.62881 4.95745 8.27201 5.37985 6.69569 6.01281C5.96993 6.30337 5.35745 6.80257 4.92417 7.45665C1.90273 12.0205 0.718731 16.9434 1.30497 22.5075C1.32545 22.7027 1.43425 22.8775 1.60001 22.9818C3.92449 24.4474 5.93601 25.4509 7.93025 26.1408C8.76417 26.432 9.68897 26.1063 10.1811 25.3543L11.0586 24.0096C10.3597 23.7459 9.67745 23.4336 9.02337 23.0605C8.71681 22.8858 8.60993 22.4947 8.78465 22.1882C8.95937 21.8803 9.35041 21.7722 9.65761 21.9495C11.6039 23.0592 13.8042 23.6461 16.0205 23.6461C18.2368 23.6461 20.4371 23.0592 22.3834 21.9495C22.6899 21.7722 23.081 21.8803 23.2563 22.1882C23.431 22.4947 23.3242 22.8858 23.0176 23.0605C22.3418 23.4464 21.6352 23.7677 20.9114 24.0359L21.8144 25.3811C22.1862 25.9347 22.8 26.2496 23.4323 26.2496C23.6384 26.2496 23.8464 26.2157 24.0486 26.1466C26.0486 25.456 28.064 24.4512 30.3936 22.9824C30.5594 22.8781 30.6682 22.7027 30.6887 22.5082C31.2762 16.9434 30.0922 12.0199 27.0707 7.45601ZM11.9091 18.5491C10.6765 18.5491 9.66209 17.2506 9.66209 15.6723C9.66209 14.0941 10.6765 12.7955 11.9091 12.7955C13.1418 12.7955 14.1562 14.0941 14.1562 15.6723C14.1562 17.2506 13.1418 18.5491 11.9091 18.5491ZM20.2247 18.5325C19.0035 18.5325 17.9987 17.2263 17.9987 15.6384C17.9987 14.0506 19.0035 12.7443 20.2247 12.7443C21.4458 12.7443 22.4506 14.0506 22.4506 15.6384C22.4506 17.2263 21.4458 18.5325 20.2247 18.5325Z"
+                        d="M 7.546875 0 C 3.390625 0 0 3.390625 0 7.546875 L 0 18.453125 C 0 22.609375 3.390625 26 7.546875 26 L 18.453125 26 C 22.609375 26 26 22.609375 26 18.453125 L 26 7.546875 C 26 3.390625 22.609375 0 18.453125 0 Z M 7.546875 2 L 18.453125 2 C 21.527344 2 24 4.46875 24 7.546875 L 24 18.453125 C 24 21.527344 21.53125 24 18.453125 24 L 7.546875 24 C 4.472656 24 2 21.53125 2 18.453125 L 2 7.546875 C 2 4.472656 4.46875 2 7.546875 2 Z M 20.5 4 C 19.671875 4 19 4.671875 19 5.5 C 19 6.328125 19.671875 7 20.5 7 C 21.328125 7 22 6.328125 22 5.5 C 22 4.671875 21.328125 4 20.5 4 Z M 13 6 C 9.144531 6 6 9.144531 6 13 C 6 16.855469 9.144531 20 13 20 C 16.855469 20 20 16.855469 20 13 C 20 9.144531 16.855469 6 13 6 Z M 13 8 C 15.773438 8 18 10.226563 18 13 C 18 15.773438 15.773438 18 13 18 C 10.226563 18 8 15.773438 8 13 C 8 10.226563 10.226563 8 13 8 Z"
                         fill="white"
                         className="duration-[300ms] transition group-hover:fill-primary"
-                      />
+                      ></path>
                     </svg>
                   </Link>
                 </div>
@@ -86,7 +87,7 @@ export default function Home() {
       </section>
 
       <section className="bg-dark80">
-        <div className="container border-b border-white py-[120px]">
+        <div className="container border-about py-[120px]">
           <h1 className="font-semibold text-white text-[48px]">ABOUT ME</h1>
 
           <div className="flex items-center justify-between mt-[60px]">
@@ -125,18 +126,18 @@ export default function Home() {
 
               <div className="flex justify-end">
                 <Link href="#" className="flex gap-[6px] group items-center">
-                  <p className="text-[18px]">More About Me</p>
+                  <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[22px] transition">
+                    More About Me
+                  </p>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="48"
                     height="48"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="duration-[300ms] group-hover:translate-x-2 transition"
+                    stroke="white"
+                    className="duration-[300ms] group-hover:stroke-[#a08dd1] group-hover:translate-x-2 transition"
                   >
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
@@ -155,6 +156,172 @@ export default function Home() {
           <h2 className="font-space-grotesk font-bold mt-[60px] text-white text-[42px]">
             My extensive list of skills
           </h2>
+          <div className={HomeStyle.skills}>
+            <Marquee>
+              <Image
+                src="/icons/html.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/css.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/sass.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/javascript.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/typescript.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/github.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/vuejs.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/nuxt.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/react.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/nextjs.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+              <Image
+                src="/icons/express-js.png"
+                alt="Logo"
+                height={72}
+                width={72}
+                className="ml-[60px]"
+              />
+            </Marquee>
+          </div>
+        </div>
+      </section>
+
+      <section className={HomeStyle.portfolio}>
+        <div className="container py-[120px]">
+          <h1 className="font-semibold text-white text-[48px]">MY PORTFOLIO</h1>
+          <div className="flex items-center justify-between mt-[60px] ">
+            <h2 className="font-space-grotesk font-bold text-white text-[42px]">
+              Take a look at the projects I’ve done
+            </h2>
+
+            <Link href="#" className="flex gap-[6px] group items-center">
+              <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[22px] transition">
+                Browse all projects
+              </p>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                className="duration-[300ms] group-hover:stroke-[#a08dd1] group-hover:translate-x-2 transition"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="flex justify-between mt-[60px]">
+            <Link href="#" target="_blank" className={HomeStyle.projectCard}>
+              <div className="h-[200px] relative w-[360px]">
+                <Image
+                  src="/image/lokerian.png"
+                  alt="Logo"
+                  height={1920}
+                  width={1080}
+                  className="h-auto grayscale rounded-t-[16px] w-full"
+                />
+                <div className="absolute flex gap-1 items-center left-[16px] bottom-[16px]">
+                  <span className="bg-gradient-to-r from-[#3ec6eb_2.47%] to-[#1bc99f_102.78%] px-3 py-2 rounded-lg text-[14px]">
+                    Web Development
+                  </span>
+                  <span className="bg-gradient-to-r from-[#3ec6eb_2.47%] to-[#1bc99f_102.78%] px-3 py-2 rounded-lg text-[14px]">
+                    Vue Js
+                  </span>
+                </div>
+              </div>
+              <div className="py-[32px] px-[16px]">
+                <p className="font-bold font-space-grotesk text-white text-[28px]">
+                  Lokerian
+                </p>
+                <p className="mt-[8px] text-grey text-justify text-[18px]">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Aperiam, inventore dolorem? Quidem debitis cumque sapiente,
+                  corrupti,
+                </p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="container">
+        <div className={HomeStyle.contact}>
+          <p className="font-semibold text-center text-grey text-[24px]">
+            CONTACT
+          </p>
+          <h2 className="font-space-grotesk font-bold mt-[30px] text-center text-white text-[48px]">
+            Let’s Make ur Business Bigger! <br /> Get in Touch
+          </h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            className="bg-primary duration-[300ms] h-[75px] mt-[30px] mx-auto p-4 rounded-full transition w-[75px] hover:opacity-[0.8]"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
         </div>
       </section>
     </main>

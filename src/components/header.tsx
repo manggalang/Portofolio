@@ -6,7 +6,7 @@ import logo from "@/assets/logo.png";
 const navigation = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
-  { name: "Portofolio", link: "/portofolio" },
+  { name: "Portfolio", link: "/portfolio" },
 ];
 
 export default function Header() {
@@ -32,7 +32,7 @@ export default function Header() {
             href="/contact"
             className="bg-primary color-white font-semibold py-[14px] px-[22px] rounded-[10px]"
           >
-            Lets Talk
+            Contact Me
           </Link>
         </nav>
       </div>

@@ -1,0 +1,299 @@
+.typing {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.1em solid; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: blink 0.75s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+.typing::after {
+  content: "Web Developer";
+  animation: typing 20s infinite;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    rgb(242, 172, 132) 0%,
+    rgba(63, 89, 228) 52.6%,
+    rgb(64, 22, 160) 100%
+  );
+  filter: drop-shadow(0, 0, 0, 10, #fff);
+}
+
+@keyframes typing {
+  10% {
+    content: "Web Develope";
+  }
+  11% {
+    content: "Web Develop";
+  }
+  12% {
+    content: "Web Develo";
+  }
+  13% {
+    content: "Web Devel";
+  }
+  14% {
+    content: "Web Deve";
+  }
+  15% {
+    content: "Web De";
+  }
+  16% {
+    content: "Web D";
+  }
+  17% {
+    content: "Web ";
+  }
+  18% {
+    content: "Web";
+  }
+  19% {
+    content: "We";
+  }
+  20% {
+    content: "W";
+  }
+  21% {
+    content: "";
+  }
+
+  30% {
+    content: "F";
+  }
+  30.5% {
+    content: "Fr";
+  }
+  31% {
+    content: "Fro";
+  }
+  31.5% {
+    content: "Fron";
+  }
+  32% {
+    content: "Front";
+  }
+  32.5% {
+    content: "Front-";
+  }
+  33% {
+    content: "Front-e";
+  }
+  33.5% {
+    content: "Front-en";
+  }
+  34% {
+    content: "Front-end";
+  }
+  34.5% {
+    content: "Front-end ";
+  }
+  38% {
+    content: "Front-end D";
+  }
+  38.5% {
+    content: "Front-end De";
+  }
+  39% {
+    content: "Front-end Dev";
+  }
+  39.5% {
+    content: "Front-end Deve";
+  }
+  40% {
+    content: "Front-end Devel";
+  }
+  40.5% {
+    content: "Front-end Develo";
+  }
+  41% {
+    content: "Front-end Develop";
+  }
+  41.5% {
+    content: "Front-end Develope";
+  }
+  42% {
+    content: "Front-end Developer";
+  }
+  62% {
+    content: "Front-end Develope";
+  }
+  62.5% {
+    content: "Front-end Develop";
+  }
+  63% {
+    content: "Front-end Develo";
+  }
+  63.5% {
+    content: "Front-end Devel";
+  }
+  64% {
+    content: "Front-end Dev";
+  }
+  64.5% {
+    content: "Front-end De";
+  }
+  65% {
+    content: "Front-end D";
+  }
+  65.5% {
+    content: "Front-end ";
+  }
+  66% {
+    content: "Front-en";
+  }
+  66.5% {
+    content: "Front-e";
+  }
+  67% {
+    content: "Front-";
+  }
+  67.5% {
+    content: "Front";
+  }
+  68% {
+    content: "Fron";
+  }
+  68.5% {
+    content: "Fro";
+  }
+  69% {
+    content: "Fr";
+  }
+  69.5% {
+    content: "F";
+  }
+  70% {
+    content: "";
+  }
+  80% {
+    content: "W";
+  }
+  80.5% {
+    content: "We";
+  }
+  81% {
+    content: "Web";
+  }
+  81.5% {
+    content: "Web ";
+  }
+  82% {
+    content: "Web D";
+  }
+  82.5% {
+    content: "Web De";
+  }
+  83% {
+    content: "Web Dev";
+  }
+  83.5% {
+    content: "Web Deve";
+  }
+  84% {
+    content: "Web Devel";
+  }
+  84.5% {
+    content: "Web Develo";
+  }
+  85% {
+    content: "Web Develo";
+  }
+  85.5% {
+    content: "Web Develop";
+  }
+  86% {
+    content: "Web Develope";
+  }
+  86.5% {
+    content: "Web Developer";
+  }
+}
+
+.skills {
+  position: relative;
+  margin-top: 60px;
+}
+.skills::before {
+  background: linear-gradient(
+    to left,
+    rgb(34, 39, 47) 20%,
+    rgba(34, 39, 47, 0) 100%
+  );
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10rem;
+  z-index: 2;
+}
+
+.skills::after {
+  background: linear-gradient(
+    to right,
+    rgb(34, 39, 47) 20%,
+    rgba(34, 39, 47, 0) 100%
+  );
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  z-index: 2;
+}
+
+/* .portfolio {
+  background-image: url("/decorations/portfolio-decoration.svg");
+  background-size: 100%;
+  background-position: center -175px;
+  background-repeat: no-repeat;
+} */
+
+.projectCard {
+  background-color: #22272f;
+  /* border: 0.2rem solid; */
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 376px;
+  padding: 8px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.projectCard:hover {
+  box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px,
+    rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(255, 255, 255, 0.07) 0px 4px 8px,
+    rgba(255, 255, 255, 0.07) 0px 8px 16px,
+    rgba(255, 255, 255, 0.07) 0px 16px 32px,
+    rgba(255, 255, 255, 0.07) 0px 32px 64px;
+}
+
+.contact {
+  background-color: #22272f;
+  background-image: url("/decorations/portfolio-decoration.svg");
+  background-size: 150%;
+  background-position: center -175px;
+  background-repeat: no-repeat;
+  border: 0.4rem solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(246, 241, 231) 0%,
+    rgb(242, 172, 132) 20%,
+    rgb(63, 89, 228) 74%,
+    rgb(64, 22, 160) 100%
+  );
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 60px 0;
+}

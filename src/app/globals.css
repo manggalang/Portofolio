@@ -2,29 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   background-color: #1b1f24;
   color: #fff;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 
 .container {
@@ -34,4 +14,22 @@ body {
 
 .font-space-grotesk {
   font-family: "Space Grotesk Variable", sans-serif;
+}
+
+.banner {
+  background-image: url("/decorations/gradient-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.border-about {
+  border-bottom: 0.2rem solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(242, 172, 132) 0%,
+    rgb(63, 89, 228) 52.6%,
+    rgb(64, 22, 160) 100%
+  );
 }
