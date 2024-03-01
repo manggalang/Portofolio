@@ -34,7 +34,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="bg-primary color-white font-semibold py-[14px] px-[22px] rounded-[10px]"
+            className="bg-primary font-semibold py-[14px] px-[22px] rounded-[10px]"
           >
             Contact Me
           </Link>
