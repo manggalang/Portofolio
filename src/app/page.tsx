@@ -8,7 +8,7 @@ import HomeStyle from "../style/home.module.css";
 export default function Home() {
   return (
     <main>
-      <section className="banner h-[768px]">
+      <section className={`h-[768px] ${HomeStyle.banner}`}>
         <div className="container flex items-center justify-between h-full">
           <div className="relative">
             <div className="absolute left-0 top-[50%] translate-y-[-50%] w-[550px]">
@@ -101,8 +101,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-dark80">
-        <div className="container border-about py-[120px]">
+      <section className="bg-dark80 pt-[120px]">
+        <div className="container">
           <h1 className="font-semibold text-white text-[48px]">ABOUT ME</h1>
 
           <div className="flex items-center justify-between mt-[60px]">
@@ -161,6 +161,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className={`pt-[120px] ${HomeStyle.borderAbout}`}></div>
         </div>
       </section>
 
@@ -255,8 +256,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={HomeStyle.portfolio}>
-        <div className="container py-[120px]">
+      <section className={`py-[120px] ${HomeStyle.portfolio}`}>
+        <div className="container">
           <h1 className="font-semibold text-white text-[48px]">MY PORTFOLIO</h1>
           <div className="flex items-center justify-between mt-[60px] ">
             <h2 className="font-space-grotesk font-bold text-white text-[42px]">

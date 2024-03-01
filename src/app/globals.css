@@ -12,6 +12,10 @@ body {
   padding: 0 24px;
 }
 
+.font-space-grotesk {
+  font-family: "Space Grotesk Variable", sans-serif;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 48px;
@@ -30,26 +34,4 @@ body {
   .container {
     max-width: 1280px;
   }
-}
-
-.font-space-grotesk {
-  font-family: "Space Grotesk Variable", sans-serif;
-}
-
-.banner {
-  background-image: url("/decorations/gradient-bg.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.border-about {
-  border-bottom: 0.2rem solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    90deg,
-    rgb(242, 172, 132) 0%,
-    rgb(63, 89, 228) 52.6%,
-    rgb(64, 22, 160) 100%
-  );
 }

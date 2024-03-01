@@ -30,8 +30,8 @@ const WorkExperiences = [
 
 export default function About() {
   return (
-    <main className={AboutStyle.main}>
-      <section className="container pt-[180px]">
+    <main className={`pt-[180px] ${AboutStyle.main}`}>
+      <section className="container">
         <h1 className="font-semibold text-grey text-[22px] tracking-[6px]">
           INTRODUCTION
         </h1>
@@ -48,8 +48,8 @@ export default function About() {
         </p>
       </section>
 
-      <section>
-        <div className="container pt-[120px]">
+      <section className="pt-[120px]">
+        <div className="container">
           <h1 className="font-semibold text-grey text-[22px] tracking-[6px]">
             EXPERIENCE
           </h1>

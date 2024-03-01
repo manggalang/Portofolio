@@ -30,6 +30,24 @@
   }
 }
 
+.banner {
+  background-image: url("/decorations/gradient-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.borderAbout {
+  border-bottom: 0.2rem solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(242, 172, 132) 0%,
+    rgb(63, 89, 228) 52.6%,
+    rgb(64, 22, 160) 100%
+  );
+}
+
 .skills {
   position: relative;
   margin-top: 60px;
