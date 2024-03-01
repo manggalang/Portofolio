@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "@/assets/logo.png";
-
 const navigation = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
@@ -14,7 +12,13 @@ export default function Header() {
     <header className="backdrop-blur	 bg-[rgb(27_31_36_/_0.75)] fixed left-0 top-0 w-full z-50">
       <div className="bg-transparent container flex items-center justify-between py-[12px]">
         <Link href="/">
-          <Image src={logo} alt="" className="h-[58px] w-auto" />
+          <Image
+            src="/logo.png"
+            alt=""
+            height={58}
+            width={58}
+            className="h-[58px] w-auto"
+          />
         </Link>
 
         <nav className="flex gap-[30px] items-center">

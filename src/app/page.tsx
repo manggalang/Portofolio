@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import HomeStyle from "../style/home.module.css";
+import { TypeAnimation } from "react-type-animation";
 import Marquee from "react-fast-marquee";
+import HomeStyle from "../style/home.module.css";
 
 export default function Home() {
   return (
@@ -10,8 +12,21 @@ export default function Home() {
         <div className="container flex items-center justify-between h-full">
           <div className="relative">
             <div className="absolute left-0 top-[50%] translate-y-[-50%] w-[550px]">
-              <h1 className="font-space-grotesk font-bold text-white text-[60px]">
-                I’m Galang, a <br /> <span className={HomeStyle.typing}></span>
+              <h1 className={HomeStyle.heroText}>
+                I’m Galang, a <br />
+                <TypeAnimation
+                  sequence={[
+                    "Web Developer",
+                    3000,
+                    "Front-end Developer",
+                    3000,
+                    "Instructor",
+                    3000,
+                  ]}
+                  wrapper="span"
+                  preRenderFirstString={true}
+                  repeat={Infinity}
+                />
               </h1>
               <p className="font-bold text-grey text-[24px]">
                 Based in Bali, Indonesia
@@ -308,7 +323,7 @@ export default function Home() {
             CONTACT
           </p>
           <h2 className="font-space-grotesk font-bold mt-[30px] text-center text-white text-[48px]">
-            Let’s Make ur Business Bigger! <br /> Get in Touch
+            Let’s Develop ur Business Bigger! <br /> Get in Touch
           </h2>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -317,7 +332,7 @@ export default function Home() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="white"
-            className="bg-primary duration-[300ms] h-[75px] mt-[30px] mx-auto p-4 rounded-full transition w-[75px] hover:opacity-[0.8]"
+            className="animate-bounce bg-primary duration-[300ms] h-[75px] mt-[30px] mx-auto p-4 rounded-full transition w-[75px] hover:opacity-[0.8]"
           >
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />

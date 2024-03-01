@@ -22,7 +22,7 @@ export default function Footer() {
             />
             <div className="">
               <p className="font-space-grotesk font-bold text-white text-[36px]">
-                Mang Galang
+                Galang Permana
               </p>
               <p className="font-semibold text-grey text-[18px]">
                 Web Developer Freelance
@@ -32,7 +32,7 @@ export default function Footer() {
 
           <div>
             <h1 className="font-space-grotesk font-bold text-white text-[48px]">
-              Let's work together
+              Let&apos;s work together
             </h1>
             <div className="flex gap-16 mt-[15px]">
               <div>
