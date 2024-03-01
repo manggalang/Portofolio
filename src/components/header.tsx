@@ -26,7 +26,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.link}
-              className="duration-[300ms] font-semibold transition hover:drop-shadow-[0px_0px_12px_#075FE4]"
+              className="duration-[300ms] font-semibold text-white transition hover:drop-shadow-[0px_0px_12px_#075FE4]"
             >
               {item.name}
             </Link>
@@ -34,7 +34,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="bg-primary font-semibold py-[14px] px-[22px] rounded-[10px]"
+            className="bg-primary font-semibold py-[14px] px-[22px] rounded-[10px] text-white"
           >
             Contact Me
           </Link>

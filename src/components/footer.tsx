@@ -9,7 +9,7 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-grey mt-[120px]">
+    <footer className="bg-dark90 border-t border-grey mt-[120px]">
       <div className="border-b border-grey container flex items-start justify-between py-[120px]">
         <div className="container flex justify-between">
           <div className="flex gap-[30px] items-center">
@@ -41,7 +41,7 @@ export default function Footer() {
                 </p>
                 <Link
                   href="#"
-                  className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-[22px]"
+                  className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[22px]"
                 >
                   galangpastibisa@gmail.com
                 </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
                 </p>
                 <Link
                   href="#"
-                  className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-[22px]"
+                  className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[22px]"
                 >
                   (+62) 8582 9183 890
                 </Link>
