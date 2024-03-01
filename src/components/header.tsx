@@ -29,8 +29,8 @@ export default function Header() {
 
         <nav
           ref={navigationRef}
-          className={`bg-dark80 duration-500 fixed flex flex-col gap-[30px] h-screen items-center justify-center left-0 top-0 -translate-y-[1280px] transition w-screen md:bg-transparent md:flex-row md:h-auto md:justify-start md:static md:translate-y-0 md:w-auto ${
-            openNav ? "!translate-y-0" : ""
+          className={`bg-dark80 duration-300 fixed flex flex-col gap-[30px] h-screen items-center justify-center left-0 top-0 scale-0 transition w-screen md:bg-transparent md:flex-row md:h-auto md:justify-start md:scale-100 md:static md:rounded-none md:w-auto ${
+            openNav ? "!scale-100" : ""
           }`}
         >
           {navigation.map((item) => (
