@@ -1,18 +1,25 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
+import { useWindowSize } from "usehooks-ts";
+
 import Image from "next/image";
 import Link from "next/link";
 
-const navigation = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Portfolio", link: "/portfolio" },
-];
-
 export default function Header() {
-  const navigationRef = useRef<HTMLFormElement | null>(null);
-  const [openNav, setOpenNav] = React.useState(false);
-  const handleOpen = () => setOpenNav(!openNav);
+  const [openNav, setOpenNav] = useState(false);
+  const size = useWindowSize();
+
+  const handleOpen = () => {
+    if (size.width < 768) {
+      setOpenNav(!openNav);
+    }
+  };
+
+  const navigation = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Portfolio", link: "/portfolio" },
+  ];
 
   return (
     <header className="backdrop-blur	 bg-[rgb(27_31_36_/_0.75)] fixed left-0 py-[16px] top-0 w-full z-50">
@@ -28,7 +35,6 @@ export default function Header() {
         </Link>
 
         <nav
-          ref={navigationRef}
           className={`bg-dark80 duration-300 fixed flex flex-col gap-[30px] h-[100dvh] items-center justify-center left-0 top-0 scale-0 transition w-screen md:bg-transparent md:flex-row md:h-auto md:justify-start md:scale-100 md:static md:rounded-none md:w-auto ${
             openNav ? "!scale-100" : ""
           }`}
@@ -37,6 +43,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.link}
+              onClick={handleOpen}
               className="duration-[300ms] font-semibold text-white text-[22px] transition hover:drop-shadow-[0px_0px_12px_#075FE4] md:text-[16px]"
             >
               {item.name}
