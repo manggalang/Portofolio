@@ -98,31 +98,3 @@
     rgba(255, 255, 255, 0.07) 0px 16px 32px,
     rgba(255, 255, 255, 0.07) 0px 32px 64px;
 }
-
-.contact {
-  background-color: #22272f;
-  background-size: 150%;
-  background-position: center -175px;
-  background-repeat: no-repeat;
-  border: 0.3rem solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    90deg,
-    rgb(246, 241, 231) 0%,
-    rgb(242, 172, 132) 20%,
-    rgb(63, 89, 228) 74%,
-    rgb(64, 22, 160) 100%
-  );
-  border-radius: 8px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease-in-out;
-  padding: 60px 0;
-}
-
-.contact:hover {
-  box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px,
-    rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(255, 255, 255, 0.07) 0px 4px 8px,
-    rgba(255, 255, 255, 0.07) 0px 8px 16px,
-    rgba(255, 255, 255, 0.07) 0px 16px 32px,
-    rgba(255, 255, 255, 0.07) 0px 32px 64px;
-}

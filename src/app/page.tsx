@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import Marquee from "react-fast-marquee";
+import ContactSection from "@/components/contact-section";
 import HomeStyle from "../style/home.module.css";
 
 export default function Home() {
@@ -318,28 +319,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container">
-        <div className={HomeStyle.contact}>
-          <p className="font-semibold text-center text-grey text-[24px]">
-            CONTACT
-          </p>
-          <h2 className="font-space-grotesk font-bold mt-[30px] text-center text-white text-[48px]">
-            Let’s Develop ur Business Bigger! <br /> Get in Touch
-          </h2>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="white"
-            className="animate-bounce bg-primary duration-[300ms] h-[75px] mt-[30px] mx-auto p-4 rounded-full transition w-[75px] hover:opacity-[0.8]"
-          >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
-        </div>
-      </section>
+      <ContactSection />
     </main>
   );
 }

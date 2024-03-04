@@ -9,11 +9,11 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="bg-dark90 border-t border-grey mt-[120px]">
+    <footer className="bg-dark90 border-t border-grey mt-[90px] sm:mt-[120px]">
       <div className="flex items-start justify-between">
         <div className="border-b border-grey container">
-          <div className="flex flex-col gap-[60px] items-start justify-between py-[60px] sm:py-[120px] lg:flex-row lg:gap-0">
-            <div className="flex gap-[30px] items-center">
+          <div className="flex flex-col gap-[60px] items-start justify-between py-[90px] sm:py-[120px] lg:flex-row lg:gap-0">
+            <div className="flex gap-[15px] items-center sm:gap-[30px]">
               <Image
                 src="/image/profile-picture.jpg"
                 alt="Mang Galang Photo"
@@ -22,7 +22,7 @@ export default function Footer() {
                 className="h-[90px] rounded-full w-[90px] sm:h-[120px] sm:w-[120px]"
               />
               <div>
-                <p className="font-space-grotesk font-bold text-white text-[24px] sm:text-[36px]">
+                <p className="font-space-grotesk font-bold text-white text-[26px] sm:text-[36px]">
                   Galang Permana
                 </p>
                 <p className="font-semibold text-grey text-[16px] sm:text-[18px]">
@@ -32,28 +32,28 @@ export default function Footer() {
             </div>
 
             <div>
-              <h1 className="font-space-grotesk font-bold text-white text-[36px] sm:text-[48px]">
+              <h1 className="font-space-grotesk font-bold text-white text-[26px] md:text-[36px] lg:text-[48px]">
                 Let&apos;s work together
               </h1>
               <div className="flex flex-col gap-[32px] mt-[15px] md:flex-row md:gap-16 lg:flex-col [@media(min-width:1440px)]:flex-row">
                 <div>
-                  <p className="font-semibold font-space-grotesk text-grey text-[16px] sm:text-[18px]">
+                  <p className="font-semibold font-space-grotesk text-grey text-[14px] sm:text-[18px]">
                     EMAIL:
                   </p>
                   <Link
                     href="#"
-                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[18px] sm:text-[22px]"
+                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[16px] sm:text-[22px]"
                   >
                     galangpastibisa@gmail.com
                   </Link>
                 </div>
                 <div>
-                  <p className="font-semibold font-space-grotesk text-grey text-[16px] sm:text-[18px]">
+                  <p className="font-semibold font-space-grotesk text-grey text-[14px] sm:text-[18px]">
                     CALL ME:{" "}
                   </p>
                   <Link
                     href="#"
-                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[18px] sm:text-[22px]"
+                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[16px] sm:text-[22px]"
                   >
                     (+62) 8582 9183 890
                   </Link>

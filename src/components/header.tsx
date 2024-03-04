@@ -23,7 +23,7 @@ export default function Header() {
             alt=""
             height={58}
             width={55.98}
-            className="h-[58px] relative w-auto z-[51]"
+            className="h-[44px] relative w-auto z-[51] sm:h-[58px]"
           />
         </Link>
 
