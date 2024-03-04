@@ -9,7 +9,7 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="bg-dark90 border-t border-grey mt-[90px] sm:mt-[120px]">
+    <footer className="bg-dark90 border-t border-grey">
       <div className="flex items-start justify-between">
         <div className="border-b border-grey container">
           <div className="flex flex-col gap-[60px] items-start justify-between py-[90px] sm:py-[120px] lg:flex-row lg:gap-0">

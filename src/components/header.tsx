@@ -52,6 +52,7 @@ export default function Header() {
 
           <Link
             href="/contact"
+            onClick={handleOpen}
             className="bg-primary font-semibold py-[14px] px-[22px] rounded-[10px] text-white text-[22px] md:text-[16px]"
           >
             Contact Me

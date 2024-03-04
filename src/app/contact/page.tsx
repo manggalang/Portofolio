@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
@@ -35,9 +34,9 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-full">
+    <main className={`min-h-full ${ContactStyle.main}`}>
       <section>
-        <div className="max-w-[1024px] mx-auto pt-[180px]">
+        <div className="max-w-[1024px] mx-auto pb-[120px] pt-[180px]">
           <h1 className="font-semibold text-grey text-[22px] tracking-[6px]">
             CONTACT
           </h1>
@@ -56,7 +55,7 @@ export default function Contact() {
                 name="user_name"
                 id=""
                 required
-                className="bg-transparent border border-grey p-[12px] rounded-md text-white w-full"
+                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
               />
               <input
                 type="email"
@@ -64,7 +63,7 @@ export default function Contact() {
                 id=""
                 name="user_email"
                 required
-                className="bg-transparent border border-grey p-[12px] rounded-md text-white w-full"
+                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
               />
             </div>
 
@@ -75,7 +74,7 @@ export default function Contact() {
                 id=""
                 name="user_phone"
                 required
-                className="bg-transparent border border-grey p-[12px] rounded-md text-white w-full"
+                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
               />
               <input
                 type="text"
@@ -83,7 +82,7 @@ export default function Contact() {
                 id=""
                 name="user_company"
                 required
-                className="bg-transparent border border-grey p-[12px] rounded-md text-white w-full"
+                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
               />
             </div>
 
@@ -94,7 +93,7 @@ export default function Contact() {
               placeholder="Message"
               id=""
               required
-              className="bg-transparent border border-grey p-[12px] rounded-md text-white w-full"
+              className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
             />
             <button
               type="submit"

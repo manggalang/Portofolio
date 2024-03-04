@@ -104,16 +104,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="bg-dark80 pt-[120px]">
+      <section className="bg-dark80 pt-[90px] sm:pt-[120px]">
         <div className="container">
-          <h1 className="font-semibold text-white text-[48px]">ABOUT ME</h1>
-
-          <div className="flex items-center justify-between mt-[60px]">
-            <div className="max-w-[448px]">
-              <h2 className="font-space-grotesk font-bold text-white text-[42px]">
+          <h1 className="font-semibold text-white text-[26px] sm:text-[48px]">
+            ABOUT ME
+          </h1>
+          <div className="flex flex-col gap-[30px] items-center justify-between mt-[30px] sm:mt-[60px] lg:flex-row lg:gap-0">
+            <div className="w-full lg:max-w-[448px]">
+              <h2 className="font-space-grotesk font-bold text-white text-[22px] sm:text-[42px]">
                 I’ve been developing website since 2021
               </h2>
-              <p className="mt-[20px] text-grey text-[18]">
+              <p className="mt-[20px] text-grey text-[14px] sm:text-[18]">
                 I am a Web Developer. Proficient in using JavaScript programming
                 languages and frameworks such as React and Vue. I am very
                 enthusiastic about technology, able to work under pressure,
@@ -121,22 +122,22 @@ export default function Home() {
               </p>
             </div>
 
-            <div>
-              <div className="flex gap-[36px] items-center">
+            <div className="w-full lg:w-fit">
+              <div className="flex items-center justify-between w-full sm:gap-[36px] sm:justify-end lg:justify-normal lg:w-fit">
                 <div className="flex gap-[12px] items-center">
-                  <p className="font-bold font-space-grotesk text-white text-[98px]">
+                  <p className="font-bold font-space-grotesk text-white text-[48px] sm:text-[98px]">
                     3
                   </p>
-                  <span className="font-bold font-space-grotesk text-[28px] w-[150px]">
+                  <span className="font-bold font-space-grotesk text-[16px] w-[90px] sm:text-[28px] sm:w-[150px]">
                     Years of experience
                   </span>
                 </div>
 
                 <div className="flex gap-[12px] items-center">
-                  <p className="font-bold font-space-grotesk text-white text-[98px]">
+                  <p className="font-bold font-space-grotesk text-white text-[48px] sm:text-[98px]">
                     9
                   </p>
-                  <span className="font-bold font-space-grotesk text-[28px] w-[150px]">
+                  <span className="font-bold font-space-grotesk text-[16px] w-[90px] sm:text-[28px] sm:w-[150px]">
                     Project completed
                   </span>
                 </div>
@@ -144,7 +145,7 @@ export default function Home() {
 
               <div className="flex justify-end">
                 <Link href="#" className="flex gap-[6px] group items-center">
-                  <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[22px] transition">
+                  <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[16px] transition sm:text-[22px]">
                     More About Me
                   </p>
 
@@ -164,9 +165,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={`pt-[120px] ${HomeStyle.borderAbout}`}></div>
+          <div
+            className={`pt-[90px] sm:pt-[120px] ${HomeStyle.borderAbout}`}
+          ></div>
         </div>
-      </section> */}
+      </section>
 
       {/* <section className="bg-dark80 py-[120px]">
         <div className="container">
