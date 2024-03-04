@@ -9,32 +9,34 @@ import HomeStyle from "../style/home.module.css";
 export default function Home() {
   return (
     <main>
-      <section className={`h-[768px] ${HomeStyle.banner}`}>
-        <div className="container flex items-center justify-between h-full">
-          <div className="relative">
-            <div className="absolute left-0 top-[50%] translate-y-[-50%] w-[550px]">
+      <section className={`h-[100dvh] lg:h-[768px] ${HomeStyle.banner}`}>
+        <div className="container h-full w-full sm:flex sm:items-center sm:justify-between">
+          <div className="relative h-full w-full">
+            <div className="flex flex-col h-full items-start justify-center w-full sm:absolute sm:block sm:h-auto sm:items-center sm:justify-start sm:left-0 sm:top-[50%] sm:translate-y-[-50%] sm:w-[550px]">
               <h1 className={HomeStyle.heroText}>
                 I’m Galang, a <br />
                 <TypeAnimation
                   sequence={[
                     "Web Developer",
-                    3000,
+                    4000,
                     "Front-end Developer",
-                    3000,
+                    4000,
                     "Instructor",
-                    3000,
+                    4000,
                   ]}
                   wrapper="span"
                   preRenderFirstString={true}
                   repeat={Infinity}
                 />
               </h1>
-              <p className="font-bold text-grey text-[24px]">
+              <p className="font-bold text-grey text-[18px] sm:text-[24px]">
                 Based in Bali, Indonesia
               </p>
 
               <div className="flex gap-[16px] items-center mt-[45px]">
-                <p className="font-bold text-white text-[24px]">Follow me :</p>
+                <p className="font-bold text-white text-[18px] sm:text-[24px]">
+                  Follow me :
+                </p>
                 <div className="flex gap-[16px] items-center">
                   <Link href="#">
                     <svg
@@ -90,19 +92,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="h-full relative shrink-0 w-[730px]">
+          <div className="h-full hidden relative shrink-0 w-full md:block lg:w-[730px]">
             <Image
               src="/image/banner-image.png"
               alt="Galang Picture"
               width={730}
               height={650}
-              className="absolute bottom-0 grayscale right-0 lg:h-[650px] lg:w-[730px]"
+              className="absolute bottom-0 grayscale h-[284.93px] right-0 -z-10 w-[320px] sm:h-[569.86px] sm:w-[640px]  lg:h-[650px] lg:w-[730px]"
             />
           </div>
         </div>
       </section>
 
-      <section className="bg-dark80 pt-[120px]">
+      {/* <section className="bg-dark80 pt-[120px]">
         <div className="container">
           <h1 className="font-semibold text-white text-[48px]">ABOUT ME</h1>
 
@@ -164,9 +166,9 @@ export default function Home() {
           </div>
           <div className={`pt-[120px] ${HomeStyle.borderAbout}`}></div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="bg-dark80 py-[120px]">
+      {/* <section className="bg-dark80 py-[120px]">
         <div className="container">
           <h1 className="font-semibold text-white text-[48px]">MY SKILL</h1>
 
@@ -255,9 +257,9 @@ export default function Home() {
             </Marquee>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className={`py-[120px] ${HomeStyle.portfolio}`}>
+      {/* <section className={`py-[120px] ${HomeStyle.portfolio}`}>
         <div className="container">
           <h1 className="font-semibold text-white text-[48px]">MY PORTFOLIO</h1>
           <div className="flex items-center justify-between mt-[60px] ">
@@ -317,7 +319,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <ContactSection />
     </main>

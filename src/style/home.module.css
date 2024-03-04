@@ -1,7 +1,7 @@
 .heroText {
   color: #fff;
   font-family: "Space Grotesk Variable", sans-serif;
-  font-size: 60px;
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -97,4 +97,16 @@
     rgba(255, 255, 255, 0.07) 0px 8px 16px,
     rgba(255, 255, 255, 0.07) 0px 16px 32px,
     rgba(255, 255, 255, 0.07) 0px 32px 64px;
+}
+
+@media screen and (min-width: 640px) {
+  .heroText {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .heroText {
+    font-size: 60px;
+  }
 }
