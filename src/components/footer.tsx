@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-dark90 border-t border-grey mt-[120px]">
       <div className="flex items-start justify-between">
         <div className="border-b border-grey container">
-          <div className="flex flex-col gap-[60px] items-start justify-between py-[120px] lg:flex-row lg:gap-0">
+          <div className="flex flex-col gap-[60px] items-start justify-between py-[60px] sm:py-[120px] lg:flex-row lg:gap-0">
             <div className="flex gap-[30px] items-center">
               <Image
                 src="/image/profile-picture.jpg"
