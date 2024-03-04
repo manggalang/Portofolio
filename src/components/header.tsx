@@ -19,17 +19,17 @@ export default function Header() {
       <div className="bg-transparent container flex items-center justify-between py-[12px]">
         <Link href="/">
           <Image
-            src={`/logo.png`}
+            src={`/logo-white.svg`}
             alt=""
             height={58}
-            width={58}
+            width={55.98}
             className="h-[58px] relative w-auto z-[51]"
           />
         </Link>
 
         <nav
           ref={navigationRef}
-          className={`bg-dark80 duration-300 fixed flex flex-col gap-[30px] h-screen items-center justify-center left-0 top-0 scale-0 transition w-screen md:bg-transparent md:flex-row md:h-auto md:justify-start md:scale-100 md:static md:rounded-none md:w-auto ${
+          className={`bg-dark80 duration-300 fixed flex flex-col gap-[30px] h-[100dvh] items-center justify-center left-0 top-0 scale-0 transition w-screen md:bg-transparent md:flex-row md:h-auto md:justify-start md:scale-100 md:static md:rounded-none md:w-auto ${
             openNav ? "!scale-100" : ""
           }`}
         >

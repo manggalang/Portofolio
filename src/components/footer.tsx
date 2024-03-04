@@ -12,48 +12,48 @@ export default function Footer() {
     <footer className="bg-dark90 border-t border-grey mt-[120px]">
       <div className="flex items-start justify-between">
         <div className="border-b border-grey container">
-          <div className="flex justify-between py-[120px]">
+          <div className="flex flex-col gap-[60px] items-start justify-between py-[120px] lg:flex-row lg:gap-0">
             <div className="flex gap-[30px] items-center">
               <Image
                 src="/image/profile-picture.jpg"
                 alt="Mang Galang Photo"
                 height={120}
                 width={120}
-                className="rounded-full"
+                className="h-[90px] rounded-full w-[90px] sm:h-[120px] sm:w-[120px]"
               />
-              <div className="">
-                <p className="font-space-grotesk font-bold text-white text-[36px]">
+              <div>
+                <p className="font-space-grotesk font-bold text-white text-[24px] sm:text-[36px]">
                   Galang Permana
                 </p>
-                <p className="font-semibold text-grey text-[18px]">
+                <p className="font-semibold text-grey text-[16px] sm:text-[18px]">
                   Web Developer Freelance
                 </p>
               </div>
             </div>
 
             <div>
-              <h1 className="font-space-grotesk font-bold text-white text-[48px]">
+              <h1 className="font-space-grotesk font-bold text-white text-[36px] sm:text-[48px]">
                 Let&apos;s work together
               </h1>
-              <div className="flex gap-16 mt-[15px]">
+              <div className="flex flex-col gap-[32px] mt-[15px] md:flex-row md:gap-16 lg:flex-col [@media(min-width:1440px)]:flex-row">
                 <div>
-                  <p className="font-semibold font-space-grotesk text-grey text-[18px]">
+                  <p className="font-semibold font-space-grotesk text-grey text-[16px] sm:text-[18px]">
                     EMAIL:
                   </p>
                   <Link
                     href="#"
-                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[22px]"
+                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[18px] sm:text-[22px]"
                   >
                     galangpastibisa@gmail.com
                   </Link>
                 </div>
                 <div>
-                  <p className="font-semibold font-space-grotesk text-grey text-[18px]">
+                  <p className="font-semibold font-space-grotesk text-grey text-[16px] sm:text-[18px]">
                     CALL ME:{" "}
                   </p>
                   <Link
                     href="#"
-                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[22px]"
+                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[18px] sm:text-[22px]"
                   >
                     (+62) 8582 9183 890
                   </Link>
@@ -63,21 +63,21 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="container flex items-center justify-between">
+      <div className="container flex flex-col items-center justify-between sm:flex-row">
         <nav className="flex gap-[30px] items-center py-[30px]">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.link}
-              className="font-space-grotesk transition text-white text-[20px]"
+              className="font-space-grotesk text-center transition text-white text-[16px] lg:text-[20px]"
             >
               {item.name}
             </Link>
           ))}
         </nav>
 
-        <p className="font-space-grotesk text-white text-[20px]">
-          Mang Galang
+        <p className="font-space-grotesk pb-[30px] text-center text-white text-[16px] sm:pb-0 lg:text-[20px]">
+          Galang Permana
           <span className="text-grey"> © 2024. All Rights Reserved</span>
         </p>
       </div>

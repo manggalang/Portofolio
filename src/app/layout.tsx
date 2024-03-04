@@ -8,8 +8,8 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mang Galang",
-  description: "Mang Galang Portofolio",
+  title: "Galang Permana",
+  description: "Galang Permana Portfolio",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        {children}
+        {/* {children} */}
         <Footer />
       </body>
     </html>

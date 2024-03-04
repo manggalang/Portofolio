@@ -109,7 +109,7 @@ export default function Contact() {
         className={
           !open
             ? "hidden"
-            : "backdrop-blur-md	bg-[#22272f20] fixed flex h-screen items-center justify-center p-[120px] top-2/4 -translate-y-2/4 w-screen z-50"
+            : "backdrop-blur-md	bg-[#22272f20] fixed flex h-[100dvh] items-center justify-center p-[120px] top-2/4 -translate-y-2/4 w-screen z-50"
         }
       >
         <div className={ContactStyle.dialog}>
