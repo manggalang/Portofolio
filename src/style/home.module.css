@@ -84,10 +84,10 @@
 
 .projectCard {
   background-color: #22272f;
-  /* border: 0.2rem solid; */
+  border: 0.2rem solid #ffffffb5;
   border-radius: 16px;
   overflow: hidden;
-  max-width: 376px;
+  max-width: 335px;
   padding: 8px;
   transition: box-shadow 0.3s ease-in-out;
 }
@@ -102,6 +102,10 @@
 @media screen and (min-width: 640px) {
   .heroText {
     font-size: 48px;
+  }
+
+  .projectCard {
+    max-width: 376px;
   }
 }
 

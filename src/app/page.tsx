@@ -6,6 +6,80 @@ import Marquee from "react-fast-marquee";
 import ContactSection from "@/components/contact-section";
 import HomeStyle from "../style/home.module.css";
 
+const skills = [
+  {
+    name: "HTML",
+    pathname: "/icons/html.png",
+  },
+  {
+    name: "CSS",
+    pathname: "/icons/css.png",
+  },
+  {
+    name: "SCSS",
+    pathname: "/icons/sass.png",
+  },
+  {
+    name: "Javascript",
+    pathname: "/icons/javascript.png",
+  },
+  {
+    name: "Typescript",
+    pathname: "/icons/typescript.png",
+  },
+  {
+    name: "Github",
+    pathname: "/icons/github.png",
+  },
+  {
+    name: "Vue.js",
+    pathname: "/icons/vuejs.png",
+  },
+  {
+    name: "Nuxt",
+    pathname: "/icons/nuxt.png",
+  },
+  {
+    name: "React.js",
+    pathname: "/icons/react.png",
+  },
+  {
+    name: "Next",
+    pathname: "/icons/nextjs.png",
+  },
+  {
+    name: "Express.js",
+    pathname: "/icons/express-js.png",
+  },
+];
+
+const portfolio = [
+  {
+    name: "Kuliku",
+    image: "/image/kuliku.png",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+    tag: ["UI & UX design", "Prototyping"],
+    link: "https://bit.ly/prototype-kuliku",
+  },
+  {
+    name: "Benerin.id",
+    image: "/image/benerin.png",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+    tag: ["Nuxt", "Web Development"],
+    link: "https://benerin.id/",
+  },
+  {
+    name: "Lokerian",
+    image: "/image/lokerian.png",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+    tag: ["Vue.js", "Web Development"],
+    link: "https://www.lokerian.com/",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -25,6 +99,7 @@ export default function Home() {
                     4000,
                   ]}
                   wrapper="span"
+                  speed={50}
                   preRenderFirstString={true}
                   repeat={Infinity}
                 />
@@ -114,7 +189,7 @@ export default function Home() {
               <h2 className="font-space-grotesk font-bold text-white text-[22px] sm:text-[42px]">
                 I’ve been developing website since 2021
               </h2>
-              <p className="mt-[20px] text-grey text-[14px] sm:text-[18]">
+              <p className="mt-[20px] text-grey text-[14px] sm:text-[18px]">
                 I am a Web Developer. Proficient in using JavaScript programming
                 languages and frameworks such as React and Vue. I am very
                 enthusiastic about technology, able to work under pressure,
@@ -171,107 +246,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="bg-dark80 py-[120px]">
+      <section className="bg-dark80 py-[90px] sm:py-[120px]">
         <div className="container">
-          <h1 className="font-semibold text-white text-[48px]">MY SKILL</h1>
+          <h1 className="font-semibold text-[26px] text-white sm:text-[48px]">
+            MY SKILL
+          </h1>
 
-          <h2 className="font-space-grotesk font-bold mt-[60px] text-white text-[42px]">
+          <h2 className="font-space-grotesk font-bold mt-[30px] text-[22px] text-white sm:mt-[60px] sm:text-[42px]">
             My extensive list of skills
           </h2>
           <div className={HomeStyle.skills}>
             <Marquee>
-              <Image
-                src="/icons/html.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/css.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/sass.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/javascript.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/typescript.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/github.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/vuejs.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/nuxt.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/react.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/nextjs.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
-              <Image
-                src="/icons/express-js.png"
-                alt="Logo"
-                height={72}
-                width={72}
-                className="ml-[60px]"
-              />
+              {skills.map((item) => (
+                <Image
+                  key={item.name}
+                  src={item.pathname}
+                  alt={`Logo ${item.name}`}
+                  height={72}
+                  width={72}
+                  className="brightness-75 duration-300 grayscale h-[48px] hover:grayscale-0 ml-[30px] transition w-[48px] sm:h-[72px] sm:ml-[60px] sm:w-[72px]"
+                />
+              ))}
             </Marquee>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className={`py-[120px] ${HomeStyle.portfolio}`}>
+      <section className={`py-[120px] ${HomeStyle.portfolio}`}>
         <div className="container">
-          <h1 className="font-semibold text-white text-[48px]">MY PORTFOLIO</h1>
-          <div className="flex items-center justify-between mt-[60px] ">
-            <h2 className="font-space-grotesk font-bold text-white text-[42px]">
+          <h1 className="font-semibold text-white text-[26px] sm:text-[48px]">
+            MY PORTFOLIO
+          </h1>
+          <div className="flex items-center justify-between mt-[30px] sm:mt-[60px]">
+            <h2 className="font-space-grotesk font-bold text-white text-[22px] sm:text-[42px]">
               Take a look at the projects I’ve done
             </h2>
 
-            <Link href="#" className="flex gap-[6px] group items-center">
-              <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[22px] transition">
+            <Link
+              href="#"
+              className="group hidden lg:flex lg:gap-[6px] lg:items-center"
+            >
+              <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[16px] transition whitespace-nowrap sm:text-[22px]">
                 Browse all projects
               </p>
 
@@ -290,39 +305,51 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex justify-between mt-[60px]">
-            <Link href="#" target="_blank" className={HomeStyle.projectCard}>
-              <div className="h-[200px] relative w-[360px]">
-                <Image
-                  src="/image/lokerian.png"
-                  alt="Logo"
-                  height={1920}
-                  width={1080}
-                  className="h-auto grayscale rounded-t-[16px] w-full"
-                />
-                <div className="absolute flex gap-1 items-center left-[16px] bottom-[16px]">
-                  <span className="bg-gradient-to-r from-[#3ec6eb_2.47%] to-[#1bc99f_102.78%] px-3 py-2 rounded-lg text-[14px]">
-                    Web Development
-                  </span>
-                  <span className="bg-gradient-to-r from-[#3ec6eb_2.47%] to-[#1bc99f_102.78%] px-3 py-2 rounded-lg text-[14px]">
-                    Vue Js
-                  </span>
+          <div
+            className={`gap-[25px] grid grid-cols-1 justify-items-center mt-[60px] sm:gap-[45px] lg:gap-[16px] lg:justify-items-start	 lg:grid-cols-3 lg:justify-between`}
+          >
+            {portfolio.map((item) => (
+              <Link
+                key={item.name}
+                href={item.link}
+                target="_blank"
+                className={`group ${HomeStyle.projectCard}`}
+              >
+                <div className="max-h-[200px] overflow-hidden relative rounded-t-[16px] w-full">
+                  <Image
+                    src={item.image}
+                    alt={`Logo ${item.name}`}
+                    height={200}
+                    width={355.56}
+                    className="delay-300 duration-300 h-[200px] grayscale group-hover:grayscale-0 group-hover:scale-[1.05] object-cover transition w-full"
+                  />
+
+                  <div className="absolute flex gap-1 items-center left-[16px] bottom-[16px]">
+                    {item.tag.map((tag) => (
+                      <span
+                        key={tag}
+                        className="bg-gradient-to-r from-[#3ec6eb_2.47%] to-[#1bc99f_102.78%] px-3 py-2 rounded-lg text-[12px] sm:text-[14px]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="py-[32px] px-[16px]">
-                <p className="font-bold font-space-grotesk text-white text-[28px]">
-                  Lokerian
-                </p>
-                <p className="mt-[8px] text-grey text-justify text-[18px]">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Aperiam, inventore dolorem? Quidem debitis cumque sapiente,
-                  corrupti,
-                </p>
-              </div>
-            </Link>
+
+                <div className="py-[32px] px-[16px]">
+                  <p className="font-bold font-space-grotesk text-white text-[22px] sm:text-[28px]">
+                    {item.name}
+                  </p>
+
+                  <p className="mt-[8px] text-grey text-justify text-[14px] sm:text-[18px]">
+                    {item.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <ContactSection />
     </main>
