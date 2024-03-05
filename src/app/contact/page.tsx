@@ -36,53 +36,53 @@ export default function Contact() {
   return (
     <main className={`min-h-full ${ContactStyle.main}`}>
       <section>
-        <div className="max-w-[1024px] mx-auto pb-[120px] pt-[180px]">
-          <h1 className="font-semibold text-grey text-[22px] tracking-[6px]">
+        <div className="pb-[120px] pt-[150px] px-[24px] sm:pb-[90px] sm:pt-[180px] md:px-[48px] xl:max-w-[1024px] xl:mx-auto xl:px-0">
+          <h1 className="font-semibold text-grey text-[16px] tracking-[6px] sm:text-[22px]">
             CONTACT
           </h1>
-          <h2 className="font-space-grotesk font-bold mt-[12px] text-white text-[60px]">
+          <h2 className="font-space-grotesk font-bold mt-[12px] text-white text-[26px] sm:text-[48px] lg:text-[60px]">
             Let&apos;s talk about ur project
           </h2>
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="flex flex-col gap-[24px] mt-[60px]"
+            className="flex flex-col gap-[24px] mt-[30px] sm:mt-[60px]"
           >
-            <div className="flex gap-[24px] justify-between">
+            <div className="flex flex-col gap-[24px] justify-between sm:flex-row">
               <input
                 type="text"
                 placeholder="Name"
                 name="user_name"
                 id=""
                 required
-                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
+                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full sm:text-[14px] sm:placeholder:text-[14px]"
               />
               <input
                 type="email"
-                placeholder="Work Email"
+                placeholder="Email"
                 id=""
                 name="user_email"
                 required
-                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
+                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full sm:text-[14px] sm:placeholder:text-[14px]"
               />
             </div>
 
-            <div className="flex gap-[24px] justify-between">
+            <div className="flex flex-col gap-[24px] justify-between sm:flex-row">
               <input
                 type="tel"
                 placeholder="Phone Number"
                 id=""
                 name="user_phone"
                 required
-                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
+                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full sm:text-[14px] sm:placeholder:text-[14px]"
               />
               <input
                 type="text"
-                placeholder="Company Name"
+                placeholder="Project Name"
                 id=""
                 name="user_company"
                 required
-                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
+                className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full sm:text-[14px] sm:placeholder:text-[14px]"
               />
             </div>
 
@@ -93,7 +93,7 @@ export default function Contact() {
               placeholder="Message"
               id=""
               required
-              className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full"
+              className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full sm:text-[14px] sm:placeholder:text-[14px]"
             />
             <button
               type="submit"
@@ -104,6 +104,7 @@ export default function Contact() {
           </form>
         </div>
       </section>
+
       <dialog
         className={
           !open
@@ -130,6 +131,7 @@ export default function Contact() {
               Please wait I will reply
             </p>
           </div>
+
           <Link
             href="/"
             className="bg-primary font-semibold py-[14px] px-[22px] rounded-[10px] text-white"

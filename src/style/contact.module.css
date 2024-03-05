@@ -52,4 +52,14 @@
   .contactCard {
     padding: 45px 0;
   }
+
+  .main {
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    background-size: 1280px;
+  }
 }
