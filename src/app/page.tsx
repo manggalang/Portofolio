@@ -219,7 +219,10 @@ export default function Home() {
               </div>
 
               <div className="flex justify-end">
-                <Link href="#" className="flex gap-[6px] group items-center">
+                <Link
+                  href="/about"
+                  className="flex gap-[6px] group items-center"
+                >
                   <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[16px] transition sm:text-[22px]">
                     More About Me
                   </p>
@@ -283,7 +286,7 @@ export default function Home() {
             </h2>
 
             <Link
-              href="#"
+              href="/portfolio"
               className="group hidden lg:flex lg:gap-[6px] lg:items-center"
             >
               <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[16px] transition whitespace-nowrap sm:text-[22px]">

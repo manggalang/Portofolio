@@ -29,7 +29,7 @@
 .main {
   background-image: url("/decorations/contact-decoration.svg");
   background-size: cover;
-  background-position: center 75%;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 

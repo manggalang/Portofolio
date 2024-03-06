@@ -34,9 +34,9 @@ export default function Contact() {
   };
 
   return (
-    <main className={`min-h-full ${ContactStyle.main}`}>
+    <main className={`pt-[150px] sm:pt-[180px] ${ContactStyle.main}`}>
       <section>
-        <div className="pb-[120px] pt-[150px] px-[24px] sm:pb-[90px] sm:pt-[180px] md:px-[48px] xl:max-w-[1024px] xl:mx-auto xl:px-0">
+        <div className="pb-[120px] px-[24px] sm:pb-[90px] md:px-[48px] xl:max-w-[1024px] xl:mx-auto xl:px-0">
           <h1 className="font-semibold text-grey text-[16px] tracking-[6px] sm:text-[22px]">
             CONTACT
           </h1>
