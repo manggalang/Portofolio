@@ -97,7 +97,7 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="bg-primary font-semibold py-[14px] px-[22px] rounded-[10px]"
+              className="bg-primary duration-300 font-semibold py-[14px] px-[22px] rounded-[10px] transition hover:opacity-80"
             >
               Submit
             </button>

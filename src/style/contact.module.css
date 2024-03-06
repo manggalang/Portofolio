@@ -1,8 +1,6 @@
 .contactCard {
   background-color: #22272f;
   background-size: 150%;
-  background-position: center -175px;
-  background-repeat: no-repeat;
   border: 0.3rem solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(

@@ -5,8 +5,10 @@ import { motion, useScroll } from "framer-motion";
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathName = usePathname();
   const { scrollYProgress } = useScroll();
 
   const [openNav, setOpenNav] = useState(false);
@@ -27,10 +29,10 @@ export default function Header() {
   return (
     <header>
       <motion.div
-        className="bg-white fixed top-0 right-0 left-0 h-[2px] mt-[90px] origin-[0%] z-50"
+        className="bg-grey h-[2px] fixed left-0 mt-[83px] origin-[0%] right-0 top-0 z-50 sm:mt-[90px]"
         style={{ scaleX: scrollYProgress }}
       />
-      <div className="backdrop-blur	 bg-[rgb(27_31_36_/_0.75)] fixed left-0 py-[16px] top-0 w-full z-50">
+      <div className="backdrop-blur	 bg-[rgb(27_31_36_/_0.90)] fixed left-0 py-[16px] top-0 w-full z-50">
         <div className="bg-transparent container flex items-center justify-between py-[12px]">
           <Link href="/">
             <Image
@@ -52,7 +54,10 @@ export default function Header() {
                 key={item.name}
                 href={item.link}
                 onClick={handleOpen}
-                className="duration-[300ms] font-semibold text-white text-[22px] transition hover:drop-shadow-[0px_0px_12px_#075FE4] md:text-[16px]"
+                className={`duration-[300ms] font-semibold text-white text-[22px] transition hover:text-primary md:text-[16px] ${
+                  pathName === item.link &&
+                  "border-b-2 border-primary !text-primary"
+                }`}
               >
                 {item.name}
               </Link>
@@ -61,7 +66,7 @@ export default function Header() {
             <Link
               href="/contact"
               onClick={handleOpen}
-              className="bg-primary font-semibold py-[14px] px-[22px] rounded-[10px] text-white text-[22px] md:text-[16px]"
+              className="bg-primary duration-300 font-semibold py-[14px] px-[22px] rounded-[10px] text-white text-[22px] transition hover:opacity-80 md:text-[16px]"
             >
               Contact Me
             </Link>
