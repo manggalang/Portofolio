@@ -12,7 +12,7 @@ export default function Contact() {
   const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
   const publicKey = process.env.NEXT_PUBLIC_KEY as string;
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const handleOpen = () => setOpen(!open);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -109,7 +109,7 @@ export default function Contact() {
         className={
           !open
             ? "hidden"
-            : "backdrop-blur-md	bg-[#22272f20] fixed flex h-[100dvh] items-center justify-center p-[120px] top-2/4 -translate-y-2/4 w-screen z-50"
+            : "backdrop-blur-md	bg-[#22272f20] fixed flex h-[100dvh] items-center justify-center p-[24px] top-2/4 -translate-y-2/4 w-screen z-50 lg:p-[120px]"
         }
       >
         <div className={ContactStyle.dialog}>
@@ -118,17 +118,18 @@ export default function Contact() {
             alt="rocket icons"
             height={200}
             width={200}
+            className="h-[125px] w-[125px] sm:h-[200px] sm:w-[200px]"
           />
           <div>
-            <h4 className="font-bold text-center text-dark80 text-[22px]">
+            <h4 className="font-bold text-center text-dark80 text-[18px] sm:text-[22px]">
               Yoohoo!
               <br />
               Message Sent Successfully
             </h4>
-            <p className="font-semibold mt-[15px] text-center text-[#676767]">
+            <p className="font-semibold mt-[15px] text-center text-[#676767] text-[14px] sm:text-[16px]">
               Thank you for sending the message.
               <br />
-              Please wait I will reply
+              Please wait until i reply
             </p>
           </div>
 

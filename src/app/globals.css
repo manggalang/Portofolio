@@ -28,6 +28,21 @@ input:-webkit-autofill:active {
   font-family: "Space Grotesk Variable", sans-serif;
 }
 
+.not-found-page {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 0px #e6cb00, 0 0 2px #e6cb00,
+      0 0 4px #e6cb00, 0 0 8px #e6cb00, 0 0 16px #e6cb00;
+  }
+  to {
+    text-shadow: 0 0 4px #fff, 0 0 8px #f0de56, 0 0 2px #f0de56, 0 0 4px #f0de56,
+      0 0 8px #f0de56, 0 0 16px #f0de56, 0 0 32px #f0de56;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 48px;
