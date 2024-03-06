@@ -9,7 +9,7 @@ const portfolio = [
     name: "Kuliku",
     image: "/image/kuliku.png",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+      "Kuliku is an online marketplace platform that connects individuals or businesses with architects, builders, service technicians who offer a range of digital services.",
     tag: ["UI & UX design", "Prototyping"],
     link: "https://bit.ly/prototype-kuliku",
   },
@@ -17,7 +17,7 @@ const portfolio = [
     name: "Benerin.id",
     image: "/image/benerin.png",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+      "Benerin.id is a startup business engaged in the service sector that will focus on solving the problem of difficulty in finding an electronics repairman.",
     tag: ["Nuxt", "Web Development"],
     link: "https://benerin.id/",
   },
@@ -25,7 +25,7 @@ const portfolio = [
     name: "Lokerian",
     image: "/image/lokerian.png",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+      "Lokerian is a platform to find information on daily job vacancies, contracts according to your experience.",
     tag: ["Vue.js", "Web Development"],
     link: "https://www.lokerian.com/",
   },

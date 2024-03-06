@@ -40,12 +40,17 @@ export default function About() {
           Hi, I&apos;m Galang! Web Developer from Indonesia
         </h2>
         <p className="mt-[12px] text-grey text-[14px] sm:text-[18px]">
-          I am a student at Primakara University majoring in Informatics
-          Engineering in 2021. I am also a Web Developer. Proficient in using
-          JavaScript programming languages and frameworks such as React and Vue.
-          I&apos;m very enthusiastic about technology, able to work under
-          pressure, learn quickly and proficiently to work in a team or
-          individually.
+          I am a student at Primakara University, majoring in Computer
+          Engineering, class of 2021. Besides being active in lectures, I also
+          have a passion for web development and have been working as a
+          freelance web developer for the past 3 years.
+          <br />
+          <br />
+          My experience in web development is quite diverse, ranging from
+          building static and dynamic websites to designing and developing
+          attractive user interfaces. I am also experienced in various web
+          programming languages such as HTML, CSS, and JavaScript. I also have a
+          passion for sharing my knowledge and experience.
         </p>
       </section>
 
@@ -61,14 +66,15 @@ export default function About() {
             <div className="w-full xl:w-[70%]">
               <div className={AboutStyle.BorderBottom}>
                 <p className="text-grey text-[14px] sm:text-[18px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                  aut, fugiat doloribus similique nemo, dignissimos quidem unde
-                  aspernatur rerum, ipsum corporis incidunt consequuntur aliquam
-                  beatae praesentium. <br /> <br /> Excepturi reiciendis vero
-                  nemo. Expedita laborum molestiae voluptates ullam? Asperiores
-                  culpa ullam natus vero mollitia dicta blanditiis praesentium
-                  architecto error est aperiam adipisci tempora, beatae, iste
-                  voluptates veniam quasi, eveniet nostrum minima rem nihil.
+                  Over the past 3 years, I have honed my skills in website
+                  development and software design. Building on this foundation,
+                  I transitioned into my current role as a front-end developer,
+                  designing engaging user experiences for desktop and mobile
+                  applications.
+                  <br />
+                  <br />I was once a web developer instructor at Primakara
+                  Developer, where I helped participants learn the basics of web
+                  development and build their own websites.
                 </p>
               </div>
               <div className="gap-[30px] grid grid-cols-1 pt-[45px] lg:grid-cols-2">

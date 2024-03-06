@@ -42,8 +42,8 @@ export default function Footer() {
                     EMAIL:
                   </p>
                   <Link
-                    href="#"
-                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[16px] sm:text-[22px]"
+                    href="mailto:galangpastibisa@gmail.com"
+                    className="border-b-[3px] border-grey duration-300 font-semibold font-space-grotesk hover:border-secondary hover:text-secondary mt-[6px] pb-1 text-white text-[16px] transition sm:text-[22px]"
                   >
                     galangpastibisa@gmail.com
                   </Link>
@@ -53,8 +53,8 @@ export default function Footer() {
                     CALL ME:{" "}
                   </p>
                   <Link
-                    href="#"
-                    className="border-b-[3px] border-grey font-semibold font-space-grotesk mt-[6px] pb-1 text-white text-[16px] sm:text-[22px]"
+                    href="tel:+6285829183890"
+                    className="border-b-[3px] border-grey duration-300 font-semibold font-space-grotesk hover:border-secondary hover:text-secondary mt-[6px] pb-1 text-white text-[16px] transition sm:text-[22px]"
                   >
                     (+62) 8582 9183 890
                   </Link>
@@ -70,7 +70,7 @@ export default function Footer() {
             <Link
               key={item.name}
               href={item.link}
-              className="font-space-grotesk text-center transition text-white text-[16px] lg:text-[20px]"
+              className="duration-300 font-space-grotesk hover:text-secondary text-center transition text-white text-[16px] lg:text-[20px]"
             >
               {item.name}
             </Link>

@@ -58,7 +58,7 @@ const portfolio = [
     name: "Kuliku",
     image: "/image/kuliku.png",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+      "Kuliku is an online marketplace platform that connects individuals or businesses with architects, builders, service technicians who offer a range of digital services.",
     tag: ["UI & UX design", "Prototyping"],
     link: "https://bit.ly/prototype-kuliku",
   },
@@ -66,7 +66,7 @@ const portfolio = [
     name: "Benerin.id",
     image: "/image/benerin.png",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+      "Benerin.id is a startup business engaged in the service sector that will focus on solving the problem of difficulty in finding an electronics repairman.",
     tag: ["Nuxt", "Web Development"],
     link: "https://benerin.id/",
   },
@@ -74,7 +74,7 @@ const portfolio = [
     name: "Lokerian",
     image: "/image/lokerian.png",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, inventore dolorem? Quidem debitis cumque sapiente, corrupti,",
+      "Lokerian is a platform to find information on daily job vacancies, contracts according to your experience.",
     tag: ["Vue.js", "Web Development"],
     link: "https://www.lokerian.com/",
   },
@@ -92,11 +92,11 @@ export default function Home() {
                 <TypeAnimation
                   sequence={[
                     "Web Developer",
-                    4000,
+                    3500,
                     "Front-end Developer",
                     4000,
                     "Instructor",
-                    4000,
+                    3500,
                   ]}
                   wrapper="span"
                   speed={50}
@@ -113,7 +113,10 @@ export default function Home() {
                   Follow me :
                 </p>
                 <div className="flex gap-[16px] items-center">
-                  <Link href="#">
+                  <Link
+                    href="https://www.linkedin.com/in/i-komang-adi-galang-permana/"
+                    target="_blank"
+                  >
                     <svg
                       width="32"
                       height="32"
@@ -129,7 +132,7 @@ export default function Home() {
                       />
                     </svg>
                   </Link>
-                  <Link href="#">
+                  <Link href="https://github.com/manggalang" target="_blank">
                     <svg
                       width="32"
                       height="32"
@@ -145,7 +148,10 @@ export default function Home() {
                       />
                     </svg>
                   </Link>
-                  <Link href="#">
+                  <Link
+                    href="https://www.instagram.com/mang_galang/"
+                    target="_blank"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -210,7 +216,7 @@ export default function Home() {
 
                 <div className="flex gap-[12px] items-center">
                   <p className="font-bold font-space-grotesk text-white text-[48px] sm:text-[98px]">
-                    9
+                    7
                   </p>
                   <span className="font-bold font-space-grotesk text-[16px] w-[90px] sm:text-[28px] sm:w-[150px]">
                     Project completed
@@ -223,7 +229,7 @@ export default function Home() {
                   href="/about"
                   className="flex gap-[6px] group items-center"
                 >
-                  <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[16px] transition sm:text-[22px]">
+                  <p className="duration-[300ms] font-semibold group-hover:text-secondary text-[16px] transition sm:text-[22px]">
                     More About Me
                   </p>
 
@@ -234,7 +240,7 @@ export default function Home() {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="white"
-                    className="duration-[300ms] group-hover:stroke-[#a08dd1] group-hover:translate-x-2 transition"
+                    className="duration-[300ms] group-hover:stroke-secondary group-hover:translate-x-2 transition"
                   >
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
@@ -289,7 +295,7 @@ export default function Home() {
               href="/portfolio"
               className="group hidden lg:flex lg:gap-[6px] lg:items-center"
             >
-              <p className="duration-[300ms] font-semibold group-hover:text-[#a08dd1] text-[16px] transition whitespace-nowrap sm:text-[22px]">
+              <p className="duration-[300ms] font-semibold group-hover:text-secondary text-[16px] transition whitespace-nowrap sm:text-[22px]">
                 Browse all projects
               </p>
 
@@ -300,7 +306,7 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="white"
-                className="duration-[300ms] group-hover:stroke-[#a08dd1] group-hover:translate-x-2 transition"
+                className="duration-[300ms] group-hover:stroke-secondary group-hover:translate-x-2 transition"
               >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
