@@ -12,7 +12,7 @@ export default function Contact() {
   const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
   const publicKey = process.env.NEXT_PUBLIC_KEY as string;
 
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
