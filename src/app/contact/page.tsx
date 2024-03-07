@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import Link from "next/link";
 import ContactStyle from "../../style/contact.module.css";
+import RegulartButton from "@/components/regular-button";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement | null>(null);
@@ -95,12 +96,7 @@ export default function Contact() {
               required
               className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full sm:text-[14px] sm:placeholder:text-[14px]"
             />
-            <button
-              type="submit"
-              className="bg-primary duration-300 font-semibold py-[14px] px-[22px] rounded-[10px] transition hover:opacity-80"
-            >
-              Submit
-            </button>
+            <RegulartButton type="button" src="" text="Submit" />
           </form>
         </div>
       </section>

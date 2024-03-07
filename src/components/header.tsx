@@ -6,6 +6,7 @@ import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import RegulartButton from "./regular-button";
 
 export default function Header() {
   const pathName = usePathname();
@@ -62,13 +63,18 @@ export default function Header() {
               </Link>
             ))}
 
-            <Link
+            {/* <Link
               href="/contact"
-              onClick={handleOpen}
               className="bg-primary duration-300 font-semibold py-[14px] px-[22px] rounded-[10px] text-white text-[22px] transition hover:opacity-80 md:text-[16px]"
             >
               Contact Me
-            </Link>
+            </Link> */}
+            <RegulartButton
+              type="link"
+              text="Contact Me"
+              src="/contact"
+              onClick={handleOpen}
+            />
           </nav>
 
           <div className="block md:hidden">
