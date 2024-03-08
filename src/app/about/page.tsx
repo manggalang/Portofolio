@@ -1,4 +1,3 @@
-import Image from "next/image";
 import AboutStyle from "../../style/about.module.css";
 import ContactSection from "@/components/contact-section";
 
@@ -36,9 +35,11 @@ export default function About() {
         <h1 className="font-semibold text-grey text-[16px] tracking-[6px] sm:text-[22px]">
           INTRODUCTION
         </h1>
+
         <h2 className="font-space-grotesk font-bold mt-[12px] text-white text-[26px] sm:text-[48px] lg:text-[60px]">
           Hi, I&apos;m Galang! Web Developer from Indonesia
         </h2>
+
         <p className="mt-[12px] text-grey text-[14px] sm:text-[18px]">
           I am a student at Primakara University, majoring in Computer
           Engineering, class of 2021. Besides being active in lectures, I also
@@ -59,10 +60,12 @@ export default function About() {
           <h1 className="font-semibold text-grey text-[16px] tracking-[6px] sm:text-[22px]">
             EXPERIENCE
           </h1>
+
           <div className="flex flex-col justify-between xl:flex-row">
             <h2 className="font-space-grotesk font-bold mt-[12px] text-white text-[26px] sm:text-[48px] lg:text-[60px]">
               Work Experiences
             </h2>
+
             <div className="w-full xl:w-[70%]">
               <div className={AboutStyle.BorderBottom}>
                 <p className="text-grey text-[14px] sm:text-[18px]">
@@ -77,6 +80,7 @@ export default function About() {
                   development and build their own websites.
                 </p>
               </div>
+
               <div className="gap-[30px] grid grid-cols-1 pt-[45px] lg:grid-cols-2">
                 {WorkExperiences.map((item) => (
                   <div key={item.name}>
@@ -84,13 +88,16 @@ export default function About() {
                       <span className="font-space-grotesk font-semibold text-[20px] sm:text-[24px]">
                         {item.name}
                       </span>
+
                       <span className="font-semibold text-[16px] sm:text-[18px]">
                         {item.startdate}
                       </span>
                     </div>
+
                     <span className="block mt-[8px] text-grey text-[14px] sm:text-[16px]">
                       {item.position}
                     </span>
+
                     <p className="mt-[8px] text-grey text-[14px] sm:text-[16px]">
                       {item.desc}
                     </p>

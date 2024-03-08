@@ -10,7 +10,7 @@ export default function ContactSection() {
             CONTACT
           </p>
           <h2 className="font-space-grotesk font-bold mt-[30px] mx-auto text-center text-white text-[26px] w-[250px] sm:w-[320px] md:text-[36px] lg:text-[48px] lg:w-[710px]">
-            Let’s Make ur Business Bigger! Get in Touch
+            Let&apos;s Make ur Business Bigger! Get in Touch
           </h2>
           <Link href="/contact">
             <svg

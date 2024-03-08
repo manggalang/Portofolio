@@ -1,10 +1,10 @@
 "use client";
-import React, { useRef, FormEvent } from "react";
-import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import Link from "next/link";
-import ContactStyle from "../../style/contact.module.css";
+import React, { useRef, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 import RegulartButton from "@/components/regular-button";
+import ContactStyle from "../../style/contact.module.css";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement | null>(null);
@@ -14,10 +14,12 @@ export default function Contact() {
   const publicKey = process.env.NEXT_PUBLIC_KEY as string;
 
   const [open, setOpen] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
   const handleOpen = () => setOpen(!open);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
 
     if (form.current) {
       emailjs
@@ -25,6 +27,7 @@ export default function Contact() {
 
         .then(
           (result) => {
+            setIsLoading(false);
             handleOpen();
           },
           (error) => {
@@ -41,9 +44,11 @@ export default function Contact() {
           <h1 className="font-semibold text-grey text-[16px] tracking-[6px] sm:text-[22px]">
             CONTACT
           </h1>
+
           <h2 className="font-space-grotesk font-bold mt-[12px] text-white text-[26px] sm:text-[48px] lg:text-[60px]">
             Let&apos;s talk about ur project
           </h2>
+
           <form
             ref={form}
             onSubmit={sendEmail}
@@ -96,7 +101,12 @@ export default function Contact() {
               required
               className="bg-transparent border border-grey outline-none p-[12px] rounded-md text-white w-full sm:text-[14px] sm:placeholder:text-[14px]"
             />
-            <RegulartButton type="button" src="" text="Submit" />
+            <RegulartButton
+              type="button"
+              src=""
+              text="Submit"
+              loading={isLoading}
+            />
           </form>
         </div>
       </section>

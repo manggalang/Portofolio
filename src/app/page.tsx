@@ -1,10 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+
 import { TypeAnimation } from "react-type-animation";
 import Marquee from "react-fast-marquee";
 import ContactSection from "@/components/contact-section";
+import PortfolioCard from "@/components/portfolio-card";
 import HomeStyle from "../style/home.module.css";
+import DataPortfolio from "../utils/portfolio.json";
 
 const skills = [
   {
@@ -50,33 +53,6 @@ const skills = [
   {
     name: "Express.js",
     pathname: "/icons/express-js.png",
-  },
-];
-
-const portfolio = [
-  {
-    name: "Kuliku",
-    image: "/image/kuliku.png",
-    description:
-      "Kuliku is an online marketplace platform that connects individuals or businesses with architects, builders, service technicians who offer a range of digital services.",
-    tag: ["UI & UX design", "Prototyping"],
-    link: "https://bit.ly/prototype-kuliku",
-  },
-  {
-    name: "Benerin.id",
-    image: "/image/benerin.png",
-    description:
-      "Benerin.id is a startup business engaged in the service sector that will focus on solving the problem of difficulty in finding an electronics repairman.",
-    tag: ["Nuxt", "Web Development"],
-    link: "https://benerin.id/",
-  },
-  {
-    name: "Lokerian",
-    image: "/image/lokerian.png",
-    description:
-      "Lokerian is a platform to find information on daily job vacancies, contracts according to your experience.",
-    tag: ["Vue.js", "Web Development"],
-    link: "https://www.lokerian.com/",
   },
 ];
 
@@ -190,11 +166,13 @@ export default function Home() {
           <h1 className="font-semibold text-white text-[26px] sm:text-[48px]">
             ABOUT ME
           </h1>
+
           <div className="flex flex-col gap-[30px] items-center justify-between mt-[30px] sm:mt-[60px] lg:flex-row lg:gap-0">
             <div className="w-full lg:max-w-[448px]">
               <h2 className="font-space-grotesk font-bold text-white text-[22px] sm:text-[42px]">
-                I’ve been developing website since 2021
+                I&apos;ve been developing website since 2021
               </h2>
+
               <p className="mt-[20px] text-grey text-[14px] sm:text-[18px]">
                 I am a Web Developer. Proficient in using JavaScript programming
                 languages and frameworks such as React and Vue. I am very
@@ -209,6 +187,7 @@ export default function Home() {
                   <p className="font-bold font-space-grotesk text-white text-[48px] sm:text-[98px]">
                     3
                   </p>
+
                   <span className="font-bold font-space-grotesk text-[16px] w-[90px] sm:text-[28px] sm:w-[150px]">
                     Years of experience
                   </span>
@@ -218,6 +197,7 @@ export default function Home() {
                   <p className="font-bold font-space-grotesk text-white text-[48px] sm:text-[98px]">
                     7
                   </p>
+
                   <span className="font-bold font-space-grotesk text-[16px] w-[90px] sm:text-[28px] sm:w-[150px]">
                     Project completed
                   </span>
@@ -249,6 +229,8 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Gradient border bottom in about section */}
           <div
             className={`pt-[90px] sm:pt-[120px] ${HomeStyle.borderAbout}`}
           ></div>
@@ -286,6 +268,7 @@ export default function Home() {
           <h1 className="font-semibold text-white text-[26px] sm:text-[48px]">
             MY PORTFOLIO
           </h1>
+
           <div className="flex items-center justify-between mt-[30px] sm:mt-[60px]">
             <h2 className="font-space-grotesk font-bold text-white text-[22px] sm:text-[42px]">
               Take a look at the projects I’ve done
@@ -317,44 +300,16 @@ export default function Home() {
           <div
             className={`gap-[25px] grid grid-cols-1 justify-items-center mt-[60px] sm:gap-[45px] lg:gap-[16px] lg:justify-items-start	 lg:grid-cols-3 lg:justify-between`}
           >
-            {portfolio.map((item) => (
-              <Link
+            {DataPortfolio.slice(0, 3).map((item) => (
+              <PortfolioCard
                 key={item.name}
                 href={item.link}
                 target="_blank"
-                className={`group ${HomeStyle.projectCard}`}
-              >
-                <div className="max-h-[200px] overflow-hidden relative rounded-t-[16px] w-full">
-                  <Image
-                    src={item.image}
-                    alt={`Logo ${item.name}`}
-                    height={200}
-                    width={355.56}
-                    className="delay-300 duration-300 h-[200px] grayscale group-hover:grayscale-0 group-hover:scale-[1.05] object-cover transition w-full"
-                  />
-
-                  <div className="absolute flex gap-1 items-center left-[16px] bottom-[16px]">
-                    {item.tag.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-gradient-to-r from-[#3ec6eb_2.47%] to-[#1bc99f_102.78%] px-3 py-2 rounded-lg text-[12px] sm:text-[14px]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="py-[32px] px-[16px]">
-                  <p className="font-bold font-space-grotesk text-white text-[22px] sm:text-[28px]">
-                    {item.name}
-                  </p>
-
-                  <p className="mt-[8px] text-grey text-justify text-[14px] sm:text-[18px]">
-                    {item.description}
-                  </p>
-                </div>
-              </Link>
+                name={item.name}
+                description={item.description}
+                imgSrc={item.image}
+                tags={item.tag}
+              />
             ))}
           </div>
         </div>

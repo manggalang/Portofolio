@@ -63,12 +63,6 @@ export default function Header() {
               </Link>
             ))}
 
-            {/* <Link
-              href="/contact"
-              className="bg-primary duration-300 font-semibold py-[14px] px-[22px] rounded-[10px] text-white text-[22px] transition hover:opacity-80 md:text-[16px]"
-            >
-              Contact Me
-            </Link> */}
             <RegulartButton
               type="link"
               text="Contact Me"

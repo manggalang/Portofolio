@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const navigation = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Portfolio", link: "/portfolio" },
-  { name: "Contact", link: "/contact" },
-];
-
 export default function Footer() {
+  const navigation = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Portfolio", link: "/portfolio" },
+    { name: "Contact", link: "/contact" },
+  ];
+
   return (
     <footer className="bg-dark90 border-t border-grey">
       <div className="flex items-start justify-between">
@@ -50,7 +50,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="font-semibold font-space-grotesk text-grey text-[14px] sm:text-[18px]">
-                    CALL ME:{" "}
+                    CALL ME:
                   </p>
                   <Link
                     href="tel:+6285829183890"
