@@ -55,7 +55,7 @@ export default function Header() {
                 key={item.name}
                 href={item.link}
                 onClick={handleOpen}
-                className={`duration-[300ms] font-semibold text-white text-[22px] transition hover:text-secondary md:text-[16px] ${
+                className={`duration-[300ms] font-semibold text-white text-[18px] transition hover:text-secondary sm:text-[22px] md:text-[16px] ${
                   pathName === item.link && " !text-secondary"
                 }`}
               >

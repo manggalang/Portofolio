@@ -17,7 +17,7 @@ const RegulartButton = (props: Props) => {
         href={props.src}
         target={props.target}
         onClick={props.onClick}
-        className={`bg-primary duration-300 font-semibold py-[14px] px-[22px] rounded-[10px] text-white text-[22px] transition hover:opacity-80 md:text-[16px] ${props.style}`}
+        className={`bg-primary duration-300 font-semibold py-[14px] px-[22px] rounded-[10px] text-white text-[18px] transition hover:opacity-80 sm:text-[22px] md:text-[16px] ${props.style}`}
       >
         {props.text}
       </Link>
@@ -27,9 +27,11 @@ const RegulartButton = (props: Props) => {
       <button
         type="submit"
         onClick={props.onClick}
-        className={`bg-primary duration-300 font-semibold flex gap-[16px] items-center justify-center py-[14px] px-[22px] rounded-[10px] text-white text-[22px] transition hover:opacity-80 md:text-[16px] ${props.style}`}
+        className={`bg-primary duration-300 font-semibold flex gap-[16px] items-center justify-center py-[14px] px-[22px] rounded-[10px] transition hover:opacity-80 md:text-[16px] ${props.style}`}
       >
-        <span>{props.text}</span>
+        <span className="text-white text-[18px] sm:text-[22px]">
+          {props.text}
+        </span>
 
         <div role="status" className={`hidden ${props.loading && "!block"}`}>
           <svg
